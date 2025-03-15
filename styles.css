@@ -35,7 +35,7 @@ body {
     position: absolute;
     width: 2px;
     height: 2px;
-    background: #fff;
+    background: #ff0000;
     border-radius: 50%;
     animation: starTravel var(--duration, 3s) linear infinite;
     opacity: 0;
