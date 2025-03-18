@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #000;
+    background: #000000;
     color: #FFFFFF;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -35,7 +35,7 @@ body {
     position: absolute;
     width: 2px;
     height: 2px;
-    background: #ff0000;
+    background: #ffffff;
     border-radius: 50%;
     animation: starTravel var(--duration, 3s) linear infinite;
     opacity: 0;
@@ -90,7 +90,7 @@ body {
     overflow: hidden;
     width: 400px;
     padding: 40px;
-    box-shadow: 0 4px 24px -1pxrgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(255, 255, 255, 0.1) inset;
     flex-shrink: 0;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -227,6 +227,43 @@ body {
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
 }
 
+/* Индивидуальные цвета и свечение для иконок */
+.social-icon.youtube {
+    color: #FF0000; /* Красный для YouTube */
+}
+
+.social-icon.youtube:hover::before {
+    background: radial-gradient(circle at center, rgba(255, 0, 0, 0.15), transparent 70%);
+}
+
+.social-icon.youtube:hover svg {
+    filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.5));
+}
+
+.social-icon.discord {
+    color: #5865F2; /* Синий для Discord */
+}
+
+.social-icon.discord:hover::before {
+    background: radial-gradient(circle at center, rgba(88, 101, 242, 0.15), transparent 70%);
+}
+
+.social-icon.discord:hover svg {
+    filter: drop-shadow(0 0 8px rgba(88, 101, 242, 0.5));
+}
+
+.social-icon.telegram {
+    color: #0088CC; /* Голубой для Telegram */
+}
+
+.social-icon.telegram:hover::before {
+    background: radial-gradient(circle at center, rgba(0, 136, 204, 0.15), transparent 70%);
+}
+
+.social-icon.telegram:hover svg {
+    filter: drop-shadow(0 0 8px rgba(0, 136, 204, 0.5));
+}
+
 .portfolio-card {
     position: absolute;
     left: 100%;
@@ -266,9 +303,9 @@ body {
 
 /* Стили для прокручиваемой секции REDUX */
 .redux-section .section-content {
-    max-height: 300px; /* Задаем фиксированную высоту, измените по необходимости */
-    overflow-y: auto; /* Включаем вертикальную прокрутку */
-    padding-right: 10px; /* Добавляем отступ для скроллбара */
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
 /* Стили для скроллбара (опционально) */
