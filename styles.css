@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -37,7 +38,7 @@ body {
     height: 2px;
     background: #ffffff;
     border-radius: 50%;
-    animation: starTravel var(--duration, 3s) linear infinite;
+    animation: starTravel var(--duration, 3s) linear infinite, twinkle 2s infinite alternate;
     opacity: 0;
     box-shadow: 0 0 4px #fff;
 }
@@ -46,6 +47,7 @@ body {
     width: 3px;
     height: 3px;
     box-shadow: 0 0 6px #fff, 0 0 12px #fff;
+    animation: starTravel var(--duration, 3s) linear infinite, twinkleBright 1.5s infinite alternate;
 }
 
 @keyframes starTravel {
@@ -62,6 +64,24 @@ body {
     100% {
         transform: translateZ(-1000px) translateY(-100px) translateX(-100px);
         opacity: 0;
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes twinkleBright {
+    0% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -117,6 +137,10 @@ body {
     margin-bottom: 5px;
 }
 
+.avatar:hover {
+    transform: scale(1.05);
+}
+
 .avatar img {
     width: 100%;
     height: 100%;
@@ -142,10 +166,12 @@ body {
 }
 
 .footer {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 12px;
     font-weight: 500;
     margin: 15px 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .tags {
@@ -159,17 +185,18 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 6px 12px;
-    border-radius: 8px;
+    border-radius: 10px;
     color: rgba(255, 255, 255, 0.8);
     font-size: 13px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     text-decoration: none;
 }
 
 .tag:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
+    box-shadow: 0 4px 7px rgba(255, 255, 255, 0.1);
 }
 
 .location {
@@ -178,6 +205,17 @@ body {
     align-items: center;
     gap: 6px;
     font-size: 14px;
+}
+
+.location a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.location a:hover {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
 }
 
 .location svg {
