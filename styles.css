@@ -137,6 +137,20 @@ body {
     margin-bottom: 5px;
 }
 
+.avatar {
+    width: 120px;
+    height: 120px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 1s steps(1000000);
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+}
+
 .avatar img {
     width: 100%;
     height: 100%;
@@ -161,6 +175,19 @@ body {
     margin: 15px 0;
 }
 
+.username {
+    width: 20ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(2000000);
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+}
+
 .footer {
     color: rgba(255, 255, 255, 0.5);
     font-size: 12px;
@@ -168,6 +195,19 @@ body {
     margin: 15px 0;
     text-decoration: none;
     transition: color 0.3s ease;
+}
+
+.footer {
+    width: 20ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(75);
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
 }
 
 .tags {
@@ -195,6 +235,19 @@ body {
     box-shadow: 0 4px 7px rgba(255, 255, 255, 0.1);
 }
 
+.tag {
+    width: 15ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 1.8s steps(1000000);
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+}
+
 .location {
     color: rgba(255, 255, 255, 0.5);
     display: flex;
@@ -220,11 +273,37 @@ body {
     fill: currentColor;
 }
 
+.location {
+    width: 9ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 1.5s steps(999999);
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+}
+
 .social-links {
     display: flex;
     gap: 20px;
     justify-content: center;
     margin: 20px 0;
+}
+
+.social-links {
+    width: 20ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 1.7s steps(100000000);
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
 }
 
 .social-icon {
@@ -457,6 +536,19 @@ body {
     color: rgba(255, 255, 255, 0.5);
     font-size: 13px;
     line-height: 1.2;
+}
+
+.achievements {
+    width: 20ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(150);
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
 }
 
 /* Стили для кнопки "Назад" на мобильных устройствах */
