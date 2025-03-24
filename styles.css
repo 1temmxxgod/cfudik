@@ -142,7 +142,7 @@ body {
     height: 120px;
     text-wrap: nowrap;
     overflow: hidden;
-    animation: typing 1s steps(1000000);
+    animation: typing 2s steps(999999999);
 }
 
 @keyframes typing {
@@ -179,7 +179,7 @@ body {
     width: 20ch;
     text-wrap: nowrap;
     overflow: hidden;
-    animation: typing 2s steps(2000000);
+    animation: typing 4s steps(99999999);
 }
 
 @keyframes typing {
@@ -478,6 +478,44 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.ds {
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.ds a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ds a:hover {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+}
+
+.ds svg {
+    width: 10px;
+    height: 10px;
+    fill: currentColor;
+}
+
+.ds {
+    width: 11.38ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 1.8s steps(9999999);
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
     }
 }
 
