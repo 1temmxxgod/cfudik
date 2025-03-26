@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #000000;
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(26, 34, 73), rgb(50, 54, 255));
     color: #FFFFFF;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -29,13 +29,13 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: 0;
-    perspective: 1000px;
+    perspective: 2000px;
 }
 
 .star {
     position: absolute;
-    width: 2px;
-    height: 2px;
+    width: 1px;
+    height: 1px;
     background: #ffffff;
     border-radius: 50%;
     animation: starTravel var(--duration, 3s) linear infinite, twinkle 2s infinite alternate;
@@ -294,7 +294,7 @@ body {
 }
 
 .social-links {
-    width: 20ch;
+    width: 15ch;
     text-wrap: nowrap;
     overflow: hidden;
     animation: typing 1.7s steps(100000000);
@@ -573,11 +573,11 @@ body {
 .achievement-text {
     color: rgba(255, 255, 255, 0.5);
     font-size: 13px;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 .achievements {
-    width: 20ch;
+    width: 21ch;
     text-wrap: nowrap;
     overflow: hidden;
     animation: typing 2s steps(150);
