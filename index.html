@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cfudik - overhaul mods</title>
+    <title>cfudik</title>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.discordapp.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -36,6 +36,11 @@
                     <div class="tags">
                         <a href="#" class="tag" onclick="togglePortfolio(event)">PORTFOLIO</a>
                     </div>
+
+                    <div class="tags">
+                        <a href="#" class="tag" onclick="toggleDev(event)">Dev Catalog</a>
+                    </div>
+
                     <div class="location">
                         <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M8 0C4.686 0 2 2.686 2 6c0 4.42 6 10 6 10s6-5.58 6-10c0-3.314-2.686-6-6-6zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
@@ -126,19 +131,67 @@
                     </div>
                 </div>
             </div>
+
+            <div class="dev-card">
+                <div class="dev-items">
+                    <div class="dev-row">
+                        <div class="dev-section site-section">
+                            <a href="#" class="site-link section-title" data-text="SECTION 1">WebSite</a>
+                            <div class="section-content">
+                                <a href="https://cfudik.vercel.app" class="site-link" data-text="about cfudik" target="_blank" rel="noopener noreferrer">CFUDIK</a>
+                                <a href="https://bazik.vercel.app/" class="site-link" data-text="bazik" target="_blank" rel="noopener noreferrer">bazik shop (18+)</a>
+                            </div>
+                        </div>
+                        <div class="dev-section">
+                            <a href="#" class="site-link section-title" data-text="SECTION 2">Telegram Bot</a>
+                            <div class="section-content">
+                                <a href="https://t.me/Test_Overhaul_Bot" class="site-link" data-text="Overhaul Shop" target="_blank" rel="noopener noreferrer">Overhaul Shop</a>
+                                <a href="https://t.me/overhaull_bot" class="site-link" data-text="Overhaul Redux" target="_blank" rel="noopener noreferrer">Overhaul Redux</a>
+                            </div>
+                        </div>
+                        <div class="dev-section">
+                            <a href="#" class="site-link section-title" data-text="SECTION 3">Discord Bot</a>
+                            <div class="section-content">
+                                <a href="https://cfudik.vercel.app/" class="site-link" data-text="Overhaul" target="_blank" rel="noopener noreferrer">Overhaul</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
         </div>
     </div>
 
-    <!-- Кнопка "Назад" для мобильных устройств -->
-    <button class="back-button" onclick="togglePortfolio(event)">Back</button>
+    <!-- Изменены кнопки "Назад" для мобильных устройств -->
+    <button class="back-button" onclick="togglePortfolio(event)" style="display: none;">Back to Profile</button>
+    <button class="back-button" onclick="toggleDev(event)" style="display: none;">Back to Profile</button>
 
     <script>
         function togglePortfolio(event) {
             event.preventDefault();
             const container = document.querySelector('.container');
+            container.classList.remove('show-dev');
             container.classList.toggle('show-portfolio');
+        
+            // Показываем/скрываем кнопки Back
+            const backButtons = document.querySelectorAll('.back-button');
+            backButtons[0].style.display = container.classList.contains('show-portfolio') ? 'block' : 'none';
+            backButtons[1].style.display = 'none';
+        }
+
+        function toggleDev(event) {
+            event.preventDefault();
+            const container = document.querySelector('.container');
+            container.classList.remove('show-portfolio');
+            container.classList.toggle('show-dev');
+        
+            // Показываем/скрываем кнопки Back
+            const backButtons = document.querySelectorAll('.back-button');
+            backButtons[1].style.display = container.classList.contains('show-dev') ? 'block' : 'none';
+            backButtons[0].style.display = 'none';
         }
     </script>
+
     <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'91fd4c7c3e24dd1d',t:'MTc0MTg4NzQ0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>

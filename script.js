@@ -6,7 +6,7 @@ function createStars() {
     const starCount = 250;
 
     // Проверяем, меньше ли текущее количество звёзд в контейнере, чем желаемое (starCount)
-    if (container.children.length < starCount) {
+    if (container && container.children.length < starCount) {
         // Вычисляем, сколько звёзд нужно добавить, чтобы достичь starCount
         const starsToAdd = starCount - container.children.length;
 
@@ -46,7 +46,7 @@ function createStars() {
                 // Отключаем текущую анимацию, чтобы избежать конфликтов
                 star.style.animation = 'none';
                 // Принудительно вызываем пересчёт стилей (reflow), чтобы анимация перезапустилась
-                star.offsetHeight; // Это "хак" для сброса анимации
+                void star.offsetHeight;
                 // Устанавливаем бесконечную линейную анимацию 'starTravel' с заданной длительностью
                 star.style.animation = `starTravel ${duration}s linear infinite`;
             });
@@ -60,4 +60,54 @@ function createStars() {
 // Вызываем функцию createStars, когда страница полностью загрузилась
 window.addEventListener('load', createStars);
 // Периодически вызываем createStars каждую секунду (1000 мс), чтобы проверять и добавлять звёзды
-setInterval(createStars, 1000);
+const starsInterval = setInterval(createStars, 1000);
+
+// Добавлена логика для работы кнопок Back
+document.addEventListener('DOMContentLoaded', function() {
+    const backButtons = document.querySelectorAll('.back-button');
+    
+    backButtons.forEach(button => {
+        button.style.display = 'none'; // Скрываем все кнопки по умолчанию
+        
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const container = document.querySelector('.container');
+            
+            if (container.classList.contains('show-portfolio')) {
+                container.classList.remove('show-portfolio');
+            } else if (container.classList.contains('show-dev')) {
+                container.classList.remove('show-dev');
+            }
+            
+            // Скрываем все кнопки Back после закрытия
+            backButtons.forEach(btn => btn.style.display = 'none');
+        });
+    });
+});
+
+// Модифицированы функции togglePortfolio и toggleDev
+function togglePortfolio(event) {
+    event.preventDefault();
+    const container = document.querySelector('.container');
+    const backButtons = document.querySelectorAll('.back-button');
+    
+    container.classList.remove('show-dev');
+    container.classList.toggle('show-portfolio');
+    
+    // Показываем/скрываем соответствующую кнопку Back
+    backButtons[0].style.display = container.classList.contains('show-portfolio') ? 'block' : 'none';
+    backButtons[1].style.display = 'none';
+}
+
+function toggleDev(event) {
+    event.preventDefault();
+    const container = document.querySelector('.container');
+    const backButtons = document.querySelectorAll('.back-button');
+    
+    container.classList.remove('show-portfolio');
+    container.classList.toggle('show-dev');
+    
+    // Показываем/скрываем соответствующую кнопку Back
+    backButtons[1].style.display = container.classList.contains('show-dev') ? 'block' : 'none';
+    backButtons[0].style.display = 'none';
+}
