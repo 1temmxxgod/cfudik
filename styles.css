@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic');
+﻿@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=MedievalSharp&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -10,7 +10,8 @@
 body {
     background: linear-gradient(45deg, rgb(0, 0, 0), rgb(26, 34, 73), rgb(50, 54, 255));
     color: #FFFFFF;
-    font-family: 'Comfortaa', cursive, -apple-system, BlinkMacSystemFont;
+    font-family: "Irish Grover", system-ui, apple-system, BlinkMacSystemFont;
+    font-style: normal;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
     position: relative;
