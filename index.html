@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cfudik</title>
+    <title>cfudik | Overhaul Mods</title>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.discordapp.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -21,176 +21,132 @@
 </head>
 <body>
     <div class="stars"></div>
+    <div class="background-pattern"></div>
+    
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">OVERHAUL</div>
+            <nav class="nav-links">
+                <a href="#" class="nav-link active" onclick="showHome(event)">Home</a>
+                <a href="#" class="nav-link" onclick="togglePortfolio(event)">Mods</a>
+                <a href="https://t.me/Test_Overhaul_Bot" class="nav-link" target="_blank">Shop</a>
+                <a href="https://discord.gg/mtxr5dFtZk" class="nav-link" target="_blank">Discord</a>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-        <div class="cards-wrapper">
-            <div class="profile-card">
-                <div class="content">
-                    <div class="avatar">
-                        <img src="liushis.jpg" alt="Avatar">
+        <div class="main-content">
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h1>CFUDIK</h1>
+                    <p>The first 11 year old modmaker | Owner Overhaul Mods</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn primary" onclick="togglePortfolio(event)">PORTFOLIO</a>
+                        <a href="#" class="btn secondary" onclick="toggleDev(event)">DEV CATALOG</a>
                     </div>
-                    <div class="username">cfudik</div>
-                    <div class="achievements">
-                        <div class="achievement-text">The first 11 year old modmaker</div>
-                        <div class="achievement-text">Owner Overhaul Mods</div>
-                    </div>
-                    <div class="tags">
-                        <a href="#" class="tag" onclick="togglePortfolio(event)">PORTFOLIO</a>
-                    </div>
-
-                    <div class="tags">
-                        <a href="#" class="tag" onclick="toggleDev(event)">Dev Catalog</a>
-                    </div>
-
-                    <div class="location">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8 0C4.686 0 2 2.686 2 6c0 4.42 6 10 6 10s6-5.58 6-10c0-3.314-2.686-6-6-6zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
-                        </svg>
-                        <a href="https://maps.app.goo.gl/ZApVyKkES5iZ7mqu8" target="_blank" rel="noopener noreferrer">Serbia</a>
-                    </div>
-                    <div class="social-links">
-                        <!-- YouTube -->
-                        <a href="https://www.youtube.com/@cfudik1337" target="_blank" rel="noopener noreferrer" class="social-icon youtube">
-                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 270 187" preserveAspectRatio="xMidYMid meet">
-                                <g transform="translate(0,187) scale(0.1,-0.1)" fill="#c70000" stroke="none">
-                                    <path d="M870 1853 c-310 -11 -556 -40 -621 -74 -101 -51 -159 -136 -183 -269 -65 -357 -52 -1041 25 -1246 28 -74 94 -145 166 -177 110 -49 514 -77 1118 -77 530 0 917 25 1038 66 60 20 148 100 177 160 89 184 107 971 29 1309 -23 97 -79 178 -160 228 -71 43 -204 61 -584 77 -213 9 -800 11 -1005 3z m573 -720 c181 -105 329 -193 329 -198 0 -7 -630 -375 -669 -392 -10 -4 -13 78 -13 392 0 314 3 396 13 392 6 -3 160 -90 340 -194z"/>
-                                </g>
-                            </svg>
-                        </a>
-                        <!-- Discord -->
-                        <a href="https://discord.gg/mtxr5dFtZk" target="_blank" rel="noopener noreferrer" class="social-icon discord">
-                            <svg viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="24" height="24">
-                                <g>
-                                    <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#5865F2" fill-rule="nonzero"></path>
-                                </g>
-                            </svg>
-                        </a>
-                        <!-- Telegram -->
-                        <a href="https://t.me/ov3rhau1" target="_blank" rel="noopener noreferrer" class="social-icon telegram">
-                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid">
-                                <g>
-                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.015-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.062 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.14.12.097.153.227.171.326.017.093.036.306.02.472z" fill="#0082c7" stroke="none"/>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div class="ds">
-                        <a href="https://discord.com/servers/overhaul-1145451583119822868" target="_blank" rel="noopener noreferrer">Discord Portal</a>
-                    </div>
-
-                    <div class="footer">© made by cfudik</div>
-
+                </div>
+                <div class="hero-avatar">
+                    <img src="liushis.jpg" alt="Avatar">
                 </div>
             </div>
-            <div class="portfolio-card">
-                <div class="portfolio-items">
-                    <div class="portfolio-row">
-                        <div class="portfolio-section redux-section">
-                            <a href="#" class="redux-link section-title" data-text="SECTION 1">REDUX</a>
-                            <div class="section-content">
-                                <a href="https://www.youtube.com/watch?v=rcWJdh8pcyE&ab_channel=cfudik" class="redux-link" data-text="GODGO REDUX" target="_blank" rel="noopener noreferrer">GODGO REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=n2BiLUUG4_g&ab_channel=cfudik" class="redux-link" data-text="RED BLOOD v2 REDUX" target="_blank" rel="noopener noreferrer">RED BLOOD v2 REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=hYgBnKUkxYU&ab_channel=cfudik" class="redux-link" data-text="ILLUMINATE REDUX" target="_blank" rel="noopener noreferrer">ILLUMINATE REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=VRKIkaAK5Xw&ab_channel=cfudik" class="redux-link" data-text="BOMB1LA v3 REDUX" target="_blank" rel="noopener noreferrer">BOMB1LA v3 REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=F64tvpcL3CY&ab_channel=cfudik" class="redux-link" data-text="NEW YEAR v2 REDUX" target="_blank" rel="noopener noreferrer">NEW YEAR v2 REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=07olYqus6Bs&ab_channel=cfudik" class="redux-link" data-text="SIRIUS REDUX" target="_blank" rel="noopener noreferrer">SIRIUS REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=0Xa6u2S0fCs&ab_channel=cfudik" class="redux-link" data-text="SARANCHA REDUX" target="_blank" rel="noopener noreferrer">SARANCHA REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=1na7juuKH_k&ab_channel=cfudik" class="redux-link" data-text="BLACK REDUX" target="_blank" rel="noopener noreferrer">BLACK REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=E2uFImXcIxU&ab_channel=cfudik" class="redux-link" data-text="UNKNOWN v2 REDUX" target="_blank" rel="noopener noreferrer">UNKNOWN v2 REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=3_HbW8XYisY&ab_channel=cfudik" class="redux-link" data-text="REMAKE REDUX" target="_blank" rel="noopener noreferrer">REMAKE REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=4bLKQ16FVdo&ab_channel=cfudik" class="redux-link" data-text="KIL MID REDUX" target="_blank" rel="noopener noreferrer">KIL MID REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=bIZcEMryZUs&ab_channel=cfudik" class="redux-link" data-text="DRUG REDUX" target="_blank" rel="noopener noreferrer">DRUG REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=p542XOGUSGI&ab_channel=cfudik" class="redux-link" data-text="BOMB1LA v2 REDUX" target="_blank" rel="noopener noreferrer">BOMB1LA v2 REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=_Z3TWu27API&ab_channel=cfudik" class="redux-link" data-text="VIBIVALO v3 REDUX" target="_blank" rel="noopener noreferrer">VIBIVALO v3 REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=BkVa3KHnyhs&ab_channel=cfudik" class="redux-link" data-text="RED BLOOD REDUX" target="_blank" rel="noopener noreferrer">RED BLOOD REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=bDyS7iDjejI&ab_channel=cfudik" class="redux-link" data-text="BOMB1LA REDUX" target="_blank" rel="noopener noreferrer">BOMB1LA REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=4PCg2Mu_gkM&ab_channel=cfudik" class="redux-link" data-text="VIBIVALO v2 REDUX" target="_blank" rel="noopener noreferrer">VIBIVALO v2 REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=d-tXJJjP3Xs&ab_channel=cfudik" class="redux-link" data-text="VIBIVALO REDUX" target="_blank" rel="noopener noreferrer">VIBIVALO REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=ymP0MeiRTTE&ab_channel=cfudik" class="redux-link" data-text="UNKNOWN v1 REDUX" target="_blank" rel="noopener noreferrer">UNKNOWN v1 REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=EnjHRkvLk7o&ab_channel=cfudik" class="redux-link" data-text="SUMMER REDUX" target="_blank" rel="noopener noreferrer">SUMMER REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=gb695L5yuso&ab_channel=cfudik" class="redux-link" data-text="VIBIVASHKA REDUX" target="_blank" rel="noopener noreferrer">VIBIVASHKA REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=enm-8PDG4YE&ab_channel=cfudik" class="redux-link" data-text="FLUPKIN REDUX" target="_blank" rel="noopener noreferrer">FLUPKIN REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=NQPpiCocZPw&ab_channel=cfudik" class="redux-link" data-text="MAD REDUX" target="_blank" rel="noopener noreferrer">MAD REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=utv7pyFANW0&ab_channel=cfudik" class="redux-link" data-text="QUARZAKA REDUX" target="_blank" rel="noopener noreferrer">QUARZAKA REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=71znsjBauIs&ab_channel=cfudik" class="redux-link" data-text="NEW YEAR v1 REDUX" target="_blank" rel="noopener noreferrer">NEW YEAR v1 REDUX</a>
-                            </div>
+
+            <div class="portfolio-section hidden">
+                <div class="section-header">
+                    <h2>MY PORTFOLIO</h2>
+                    <div class="back-button" onclick="showHome(event)">← Back to Home</div>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-category">
+                        <h3>REDUX</h3>
+                        <div class="portfolio-items scrollable">
+                            <a href="https://www.youtube.com/watch?v=rcWJdh8pcyE" class="portfolio-item" target="_blank">GODGO REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=n2BiLUUG4_g" class="portfolio-item" target="_blank">RED BLOOD v2 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=hYgBnKUkxYU" class="portfolio-item" target="_blank">ILLUMINATE REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=VRKIkaAK5Xw" class="portfolio-item" target="_blank">BOMB1LA v3 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=F64tvpcL3CY" class="portfolio-item" target="_blank">NEW YEAR v2 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=07olYqus6Bs" class="portfolio-item" target="_blank">SIRIUS REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=0Xa6u2S0fCs" class="portfolio-item" target="_blank">SARANCHA REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=1na7juuKH_k" class="portfolio-item" target="_blank">BLACK REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=E2uFImXcIxU" class="portfolio-item" target="_blank">UNKNOWN v2 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=3_HbW8XYisY" class="portfolio-item" target="_blank">REMAKE REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=4bLKQ16FVdo" class="portfolio-item" target="_blank">KIL MID REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=bIZcEMryZUs" class="portfolio-item" target="_blank">DRUG REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=p542XOGUSGI" class="portfolio-item" target="_blank">BOMB1LA v2 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=_Z3TWu27API" class="portfolio-item" target="_blank">VIBIVALO v3 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=BkVa3KHnyhs" class="portfolio-item" target="_blank">RED BLOOD REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=bDyS7iDjejI" class="portfolio-item" target="_blank">BOMB1LA REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=4PCg2Mu_gkM" class="portfolio-item" target="_blank">VIBIVALO v2 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=d-tXJJjP3Xs" class="portfolio-item" target="_blank">VIBIVALO REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=ymP0MeiRTTE" class="portfolio-item" target="_blank">UNKNOWN v1 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=EnjHRkvLk7o" class="portfolio-item" target="_blank">SUMMER REDUX</a>
                         </div>
-                        <div class="portfolio-section">
-                            <a href="#" class="redux-link section-title" data-text="SECTION 2">COLLABORATIONS</a>
-                            <div class="section-content">
-                                <a href="https://www.youtube.com/watch?v=QfyheGzpqrQ&ab_channel=OUTRAGE" class="redux-link" data-text="MIXCOLOR REDUX" target="_blank" rel="noopener noreferrer">MIXCOLOR REDUX</a>
-                                <a href="https://www.youtube.com/watch?v=uRF85bJRn8g&ab_channel=OUTRAGE" class="redux-link" data-text="COLLABOTATION v2 REDUX" target="_blank" rel="noopener noreferrer">COLLABOTATION v2 REDUX</a>
-                            </div>
+                    </div>
+                    <div class="portfolio-category">
+                        <h3>COLLABORATIONS</h3>
+                        <div class="portfolio-items">
+                            <a href="https://www.youtube.com/watch?v=QfyheGzpqrQ" class="portfolio-item" target="_blank">MIXCOLOR REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=uRF85bJRn8g" class="portfolio-item" target="_blank">COLLABOTATION v2 REDUX</a>
                         </div>
-                        <div class="portfolio-section">
-                            <a href="#" class="redux-link section-title" data-text="SECTION 3">OTHER</a>
-                            <div class="section-content">
-                                <a href="https://www.youtube.com/watch?v=30uCli544LI&ab_channel=cfudik" class="redux-link" data-text="0x1n GUNPACK" target="_blank" rel="noopener noreferrer">0x1n GUNPACK</a>
-                            </div>
+                    </div>
+                    <div class="portfolio-category">
+                        <h3>OTHER</h3>
+                        <div class="portfolio-items">
+                            <a href="https://www.youtube.com/watch?v=30uCli544LI" class="portfolio-item" target="_blank">0x1n GUNPACK</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="dev-card">
-                <div class="dev-items">
-                    <div class="dev-row">
-                        <div class="dev-section site-section">
-                            <a href="#" class="site-link section-title" data-text="SECTION 1">WebSite</a>
-                            <div class="section-content">
-                                <a href="https://cfudik.vercel.app" class="site-link" data-text="about cfudik" target="_blank" rel="noopener noreferrer">CFUDIK</a>
-                            </div>
+            <div class="dev-section hidden">
+                <div class="section-header">
+                    <h2>DEVELOPMENT</h2>
+                    <div class="back-button" onclick="showHome(event)">← Back to Home</div>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="dev-grid">
+                    <div class="dev-category">
+                        <h3>WebSite</h3>
+                        <div class="dev-items">
+                            <a href="https://cfudik.vercel.app" class="dev-item" target="_blank">CFUDIK</a>
                         </div>
-                        <div class="dev-section">
-                            <a href="#" class="site-link section-title" data-text="SECTION 2">Telegram Bot</a>
-                            <div class="section-content">
-                                <a href="https://t.me/Test_Overhaul_Bot" class="site-link" data-text="Overhaul Shop" target="_blank" rel="noopener noreferrer">Overhaul Shop</a>
-                                <a href="https://t.me/overhaull_bot" class="site-link" data-text="Overhaul Redux" target="_blank" rel="noopener noreferrer">Overhaul Redux</a>
-                            </div>
+                    </div>
+                    <div class="dev-category">
+                        <h3>Telegram Bot</h3>
+                        <div class="dev-items">
+                            <a href="https://t.me/Test_Overhaul_Bot" class="dev-item" target="_blank">Overhaul Shop</a>
+                            <a href="https://t.me/overhaull_bot" class="dev-item" target="_blank">Overhaul Redux</a>
                         </div>
-                        <div class="dev-section">
-                            <a href="#" class="site-link section-title" data-text="SECTION 3">Discord Bot</a>
-                            <div class="section-content">
-                                <a class="site-link" data-text="Overhaul" target="_blank" rel="noopener noreferrer">Overhaul</a>
-                            </div>
+                    </div>
+                    <div class="dev-category">
+                        <h3>Discord Bot</h3>
+                        <div class="dev-items">
+                            <a href="#" class="dev-item">Overhaul</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!---->
         </div>
     </div>
 
-    <!-- Изменены кнопки "Назад" для мобильных устройств -->
-    <button class="back-button" onclick="togglePortfolio(event)" style="display: none;">Back to Profile</button>
-    <button class="back-button" onclick="toggleDev(event)" style="display: none;">Back to Profile</button>
-
-    <script>
-        function togglePortfolio(event) {
-            event.preventDefault();
-            const container = document.querySelector('.container');
-            container.classList.remove('show-dev');
-            container.classList.toggle('show-portfolio');
-        
-            // Показываем/скрываем кнопки Back
-            const backButtons = document.querySelectorAll('.back-button');
-            backButtons[0].style.display = container.classList.contains('show-portfolio') ? 'block' : 'none';
-            backButtons[1].style.display = 'none';
-        }
-
-        function toggleDev(event) {
-            event.preventDefault();
-            const container = document.querySelector('.container');
-            container.classList.remove('show-portfolio');
-            container.classList.toggle('show-dev');
-        
-            // Показываем/скрываем кнопки Back
-            const backButtons = document.querySelectorAll('.back-button');
-            backButtons[1].style.display = container.classList.contains('show-dev') ? 'block' : 'none';
-            backButtons[0].style.display = 'none';
-        }
-    </script>
-
-    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'91fd4c7c3e24dd1d',t:'MTc0MTg4NzQ0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.youtube.com/@cfudik1337" class="social-link" target="_blank">
+                    <img src="yt.png" alt="YouTube">
+                </a>
+                <a href="https://discord.gg/mtxr5dFtZk" class="social-link" target="_blank">
+                    <img src="ds.png" alt="Discord">
+                </a>
+                <a href="https://t.me/ov3rhau1" class="social-link" target="_blank">
+                    <img src="tg.png" alt="Telegram">
+                </a>
+            </div>
+            <div class="footer-text">
+                © 2025 CFUDIK | All Rights Reserved
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
