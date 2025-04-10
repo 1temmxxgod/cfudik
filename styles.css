@@ -1,12 +1,13 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #6C63FF;
+    --primary-color: #6c63ff;
     --secondary-color: #4D44DB;
     --dark-color: #1A1A2E;
     --light-color: #F1F1F1;
     --accent-color: #FF6584;
-    --text-color: #E6E6E6;
+    --text-color: #ffffff;
+    /* Изменено на белый для лучшей видимости */
     --text-dark: #333333;
 }
 
@@ -24,8 +25,27 @@ body {
     overflow-x: hidden;
     position: relative;
     padding-bottom: 120px;
-    /* Add padding for fixed footer */
     min-height: 100vh;
+}
+
+body {
+    background-image: url('img/overhaul.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Уменьшена прозрачность с 0.4 до 0.3 */
+    pointer-events: none;
+    z-index: -1;
 }
 
 .background-pattern {
@@ -35,7 +55,7 @@ body {
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at center, rgba(108, 99, 255, 0.1) 0%, transparent 70%);
-    z-index: -1;
+    z-index: -2;
 }
 
 .stars {
@@ -45,7 +65,7 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: -1;
+    z-index: -3;
 }
 
 .star {
@@ -74,8 +94,8 @@ body {
     left: 0;
     width: 100%;
     z-index: 100;
-    backdrop-filter: blur(10px);
-    background: rgba(26, 26, 46, 0.7);
+    background: rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(2px);
     border-bottom: 1px solid rgba(108, 99, 255, 0.2);
 }
 
@@ -105,6 +125,8 @@ body {
     font-weight: 500;
     position: relative;
     padding: 5px 0;
+    opacity: 0.9;
+    /* Увеличена видимость */
 }
 
 .nav-link::after {
@@ -127,6 +149,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 120px 40px 60px;
+    position: relative;
+    z-index: 2;
 }
 
 .main-content {
@@ -153,13 +177,16 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    opacity: 1;
+    /* Убрана прозрачность */
 }
 
 .hero-text p {
     font-size: 18px;
     color: var(--text-color);
     margin-bottom: 30px;
-    opacity: 0.8;
+    opacity: 0.9;
+    /* Увеличена видимость */
 }
 
 .hero-buttons {
@@ -169,7 +196,7 @@ body {
 
 .hero-buttons-2 {
     display: flex;
-    padding: 12px 60px;
+    padding: 12px 53px;
 }
 
 .btn {
@@ -185,36 +212,44 @@ body {
     background: var(--primary-color);
     color: white;
     box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+    opacity: 0.95;
+    /* Увеличена видимость */
 }
 
 .btn.primary:hover {
     background: var(--secondary-color);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+    opacity: 1;
 }
 
 .btn.secondary {
     background: transparent;
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
+    opacity: 0.95;
+    /* Увеличена видимость */
 }
 
 .btn.secondary:hover {
     background: rgba(108, 99, 255, 0.1);
     transform: translateY(-3px);
+    opacity: 1;
 }
 
-/* Добавьте в раздел кнопок */
 .btn.accent {
-    background: var(--accent-color);
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     color: white;
-    box-shadow: 0 4px 15px rgba(255, 101, 132, 0.3);
+    box-shadow: 0 2px 10px rgb(108, 99, 255, 0.3);
+    opacity: 0.95;
+    /* Увеличена видимость */
 }
 
 .btn.accent:hover {
-    background: #e04f70;
+    background: linear-gradient(150deg, var(--primary-color), var(--accent-color));
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 101, 132, 0.4);
+    box-shadow: 0 5px 18px rgb(108, 99, 255, 0.4);
+    opacity: 1;
 }
 
 .hero-avatar {
@@ -243,6 +278,8 @@ body {
     font-weight: 700;
     margin-bottom: 15px;
     color: var(--primary-color);
+    opacity: 0.95;
+    /* Увеличена видимость */
 }
 
 .back-button {
@@ -255,10 +292,13 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     transition: all 0.3s ease;
+    opacity: 0.9;
+    /* Увеличена видимость */
 }
 
 .back-button:hover {
     background: rgba(108, 99, 255, 0.1);
+    opacity: 1;
 }
 
 .section-divider {
@@ -267,6 +307,8 @@ body {
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     margin: 0 auto;
     border-radius: 3px;
+    opacity: 0.9;
+    /* Увеличена видимость */
 }
 
 .portfolio-grid,
@@ -278,7 +320,8 @@ body {
 
 .portfolio-category,
 .dev-category {
-    background: rgba(26, 26, 46, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    /* Осветлен фон */
     border-radius: 12px;
     padding: 25px;
     backdrop-filter: blur(10px);
@@ -294,6 +337,8 @@ body {
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(108, 99, 255, 0.3);
+    opacity: 0.95;
+    /* Увеличена видимость */
 }
 
 .portfolio-items,
@@ -329,25 +374,29 @@ body {
 
 .portfolio-item,
 .dev-item {
-    background: rgba(108, 99, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    /* Осветлен фон */
     padding: 12px 15px;
     border-radius: 8px;
     color: var(--text-color);
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 500;
+    opacity: 0.95;
+    /* Увеличена видимость */
 }
 
 .portfolio-item:hover,
 .dev-item:hover {
-    background: rgba(108, 99, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
     transform: translateX(5px);
+    opacity: 1;
 }
 
 .footer {
     padding: 40px;
-    background: rgba(26, 26, 46, 0.7);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(2px);
     border-top: 1px solid rgba(108, 99, 255, 0.2);
     position: fixed;
     bottom: 0;
@@ -373,7 +422,8 @@ body {
 .social-link img {
     width: 30px;
     height: 30px;
-    opacity: 0.7;
+    opacity: 0.8;
+    /* Увеличена видимость */
     transition: all 0.3s ease;
 }
 
@@ -384,7 +434,8 @@ body {
 
 .footer-text {
     color: var(--text-color);
-    opacity: 0.6;
+    opacity: 0.8;
+    /* Увеличена видимость */
     font-size: 14px;
 }
 
@@ -460,27 +511,14 @@ body {
     }
 }
 
-/* Добавьте в раздел кнопок */
-.btn.accent {
-    background: var(--accent-color);
-    color: white;
-    box-shadow: 0 4px 15px rgba(255, 101, 132, 0.3);
-}
-
-.btn.accent:hover {
-    background: #e04f70;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 101, 132, 0.4);
-}
-
-/* Добавьте в конец файла */
 .orders-section {
     max-width: 800px;
     margin: 0 auto;
 }
 
 .order-form {
-    background: rgba(26, 26, 46, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    /* Осветлен фон */
     padding: 30px;
     border-radius: 12px;
     backdrop-filter: blur(10px);
@@ -496,6 +534,9 @@ body {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.9;
+    /* Увеличена видимость */
 }
 
 .form-group select,
@@ -505,8 +546,9 @@ body {
     padding: 12px;
     border-radius: 8px;
     border: 1px solid rgba(108, 99, 255, 0.3);
-    background: rgba(26, 26, 46, 0.5);
-    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.15);
+    /* Осветлен фон */
+    color: var(--text-dark);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -515,7 +557,6 @@ body {
     resize: vertical;
 }
 
-/* Добавьте в конец файла */
 .btn-info {
     background: var(--secondary-color);
     color: white;
@@ -530,10 +571,13 @@ body {
     cursor: pointer;
     margin-top: 15px;
     width: 100%;
+    opacity: 0.95;
+    /* Увеличена видимость */
 }
 
 .btn-info:hover {
     background: #3a32b8;
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+    opacity: 1;
 }

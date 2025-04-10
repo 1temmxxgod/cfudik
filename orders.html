@@ -187,7 +187,7 @@
                 
                 // 2. Резервный вариант - ссылка на Telegram
                 const formattedMessage = `Новый заказ:%0A%0A▪ Тип: ${encodeURIComponent(formData.serviceType)}%0A▪ Описание: ${encodeURIComponent(formData.description)}%0A▪ Бюджет: ${encodeURIComponent(formData.budget)}₽%0A▪ Контакт: ${encodeURIComponent(formData.contact)}`;
-                const telegramUrl = `https://t.me/manager_overhaul?text=${formattedMessage}`;
+                const telegramUrl = `https://t.me/ovrh_mang?text=${formattedMessage}`;
                 
                 if (confirm(errorMessage)) {
                     try {
