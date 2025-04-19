@@ -563,7 +563,6 @@ body {
     width: 100%;
     font-size: 18px;
     box-shadow: var(--shadow-sm);
-    margin-bottom: 10px;
 }
 
 .btn.primary:hover {
